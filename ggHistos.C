@@ -137,7 +137,7 @@ void ggHistos(TString infilename="HiForest.root", TString outfilename="Zevents.r
 
     if(muPt->at(i1)>10 && fabs(muEta->at(i1))<2.4 && goodMuon(i1)) {
 
-       for(int i2 = i1; i2 < nMu; i2++) {
+       for(int i2 = i1+1; i2 < nMu; i2++) {
 
           if(muPt->at(i2)>10 && fabs(muEta->at(i2))<2.4 && goodMuon(i2)) {
 
@@ -177,7 +177,7 @@ void ggHistos(TString infilename="HiForest.root", TString outfilename="Zevents.r
 
     if(elePt->at(i1)>10 && fabs(eleSCEta->at(i1))<2.5 && goodElectron(i1) && (fabs(eleSCEta->at(i1))<1.4442 || fabs(eleSCEta->at(i1))>1.566)) {
 
-       for(int i2 = i1; i2 < nEle; i2++) {
+       for(int i2 = i1+1; i2 < nEle; i2++) {
 
           if(elePt->at(i2)>10 && fabs(eleSCEta->at(i2))<2.5 && goodElectron(i2) && (fabs(eleSCEta->at(i2))<1.4442 || fabs(eleSCEta->at(i2))>1.566)) {
 
